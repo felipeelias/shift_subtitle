@@ -1,3 +1,7 @@
+# testing options
+# http://github.com/technicalpickles/jeweler/blob/52d3b1e04d0d646006f1f188ac4bba3709327599/test/test_options.rb
+# options model
+# http://github.com/technicalpickles/jeweler/blob/1cb83013d77c27c47e17da0202bacced6e468101/lib/jeweler/generator/options.rb
 require 'optparse'
 
 module ShiftSubtitle
