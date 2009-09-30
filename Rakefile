@@ -10,6 +10,7 @@ begin
     gem.email = "felipeelias@gmail.com"
     gem.homepage = "http://github.com/felipeelias/shift_subtitle"
     gem.authors = ["Felipe Elias Philipp"]
+    gem.executables = ["shift_subtitle"]
     gem.add_development_dependency "thoughtbot-shoulda", "=2.10.2"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
