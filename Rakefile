@@ -5,8 +5,8 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "shift_subtitle"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{Add or subtract time from .str files}
+    gem.description = %Q{Add or subtract time from .str files}
     gem.email = "felipeelias@gmail.com"
     gem.homepage = "http://github.com/felipeelias/shift_subtitle"
     gem.authors = ["Felipe Elias Philipp"]
