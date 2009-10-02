@@ -1,11 +1,5 @@
 require 'time'
 
-class Time
-  def print_time
-    "#{self.strftime('%H:%M:%S')},#{self.usec / 1000}"
-  end
-end
-
 module ShiftSubtitle
   class Subtitle    
     def self.run!(args)
@@ -19,15 +13,28 @@ module ShiftSubtitle
         else :-
       end
       
-      puts @options.inspect
+      pattern = /^([0-9]{2}:[0-9]{2}:[0-9]{2},[0-9]{3}) --> ([0-9]{2}:[0-9]{2}:[0-9]{2},[0-9]{3})/
       
-      output_file << input_file.gsub(/^([0-9]{2}:[0-9]{2}:[0-9]{2},[0-9]{3}) --> ([0-9]{2}:[0-9]{2}:[0-9]{2},[0-9]{3})/) do
+      output_file << input_file.gsub(pattern) do
         time_start, time_end = Time.parse($1), Time.parse($2)
         time_start, time_end = time_start.send(operation, @options[:time]), time_end.send(operation, @options[:time])
-        "#{time_start.print_time} --> #{time_end.print_time}"
+        interval(time_start, time_end)
       end
       
       output_file.flush and output_file.close
-    end      
+    end
+    
+    private
+    
+      def self.format_time(time)
+        usec = time.usec / 1000
+        usec = sprintf("%.3d", usec)
+        "#{time.strftime('%H:%M:%S')},#{usec}"
+      end
+    
+      def self.interval(time_start, time_end)
+        "#{format_time(time_start)} --> #{format_time(time_end)}"
+      end
+    
   end  
 end
