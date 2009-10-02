@@ -21,7 +21,7 @@ module ShiftSubtitle
       
         opts.on("-o", "--operation [OPERATION]", OPERATIONS, "Add or subtract time. Use 'add' or 'sub'") do |v|
           raise OptionParser::InvalidOption unless OPERATIONS.include? v
-          self[:operation] = v
+          self[:operation] = v.to_sym
         end
 
         opts.on("-t", "--time [TIME]", Float, "Time to shift the subtitle") do |v|

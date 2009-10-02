@@ -18,15 +18,16 @@ class TestOptions < Test::Unit::TestCase
   
   def test_operation_args
     @options = ShiftSubtitle::Options.new(["-o", "add"] + @files_args)
-    assert_equal(@default_options.merge({ :operation => :add }), @options.merge({ :operation => :add }))
+    # :operation => :add is default
+    assert_equal(@default_options, @options)
     
     @options = ShiftSubtitle::Options.new(["-o", "sub"] + @files_args)
-    assert_equal(@default_options.merge({ :operation => :sub }), @options.merge({ :operation => :sub }))
+    assert_equal(@default_options.merge({ :operation => :sub }), @options)
   end
 
   def test_time_args
     @options = ShiftSubtitle::Options.new(["-t", "1.200"] + @files_args)
-    assert_equal(@default_options.merge({ :time => 1.200 }), @options.merge({ :time => 1.200 }))
+    assert_equal(@default_options.merge({ :time => 1.200 }), @options)
   end
   
   def test_invalid_operation_args_values
