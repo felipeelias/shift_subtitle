@@ -1,17 +1,16 @@
 = shift_subtitle
 
-Description goes here.
+This gem is for the 1st Ruby Programming Challenge For Newbies, of Ruby Learning Blog: http://rubylearning.com/blog/2009/09/24/rpcfn-shift-subtitle-1/
 
-== Note on Patches/Pull Requests
- 
-* Fork the project.
-* Make your feature addition or bug fix.
-* Add tests for it. This is important so I don't break it in a
-  future version unintentionally.
-* Commit, do not mess with rakefile, version, or history.
-  (if you want to have your own version, that is fine but
-   bump version in a commit by itself I can ignore when I pull)
-* Send me a pull request. Bonus points for topic branches.
+== Usage
+
+On the command line:
+
+  $ shift_subtitle --operation add --time 2.000 input_subtitle.srt output_subtitle.srt
+
+This command shifts everything 2 seconds ahead.
+
+You can use 'sub' for shift everything X seconds back
 
 == Copyright
 
