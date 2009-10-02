@@ -29,6 +29,7 @@ Gem::Specification.new do |s|
      "lib/shift_subtitle.rb",
      "lib/shift_subtitle/options.rb",
      "lib/shift_subtitle/subtitle.rb",
+     "shift_subtitle.gemspec",
      "test/fixtures/subtitle.srt",
      "test/test_helper.rb",
      "test/test_options.rb",
