@@ -5,13 +5,15 @@
 
 Gem::Specification.new do |s|
   s.name = %q{shift_subtitle}
-  s.version = "0.0.1"
+  s.version = "0.0.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Felipe Elias Philipp"]
-  s.date = %q{2009-09-30}
+  s.date = %q{2009-10-01}
+  s.default_executable = %q{shift_subtitle}
   s.description = %q{Add or subtract time from .str files}
   s.email = %q{felipeelias@gmail.com}
+  s.executables = ["shift_subtitle"]
   s.extra_rdoc_files = [
     "LICENSE",
      "README.rdoc"
@@ -23,9 +25,14 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "bin/shift_subtitle",
      "lib/shift_subtitle.rb",
-     "test/shift_subtitle_test.rb",
-     "test/test_helper.rb"
+     "lib/shift_subtitle/options.rb",
+     "lib/shift_subtitle/subtitle.rb",
+     "test/fixtures/subtitle.srt",
+     "test/test_helper.rb",
+     "test/test_options.rb",
+     "test/test_subtitle.rb"
   ]
   s.homepage = %q{http://github.com/felipeelias/shift_subtitle}
   s.rdoc_options = ["--charset=UTF-8"]
@@ -33,8 +40,9 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.3.5}
   s.summary = %q{Add or subtract time from .str files}
   s.test_files = [
-    "test/shift_subtitle_test.rb",
-     "test/test_helper.rb"
+    "test/test_helper.rb",
+     "test/test_options.rb",
+     "test/test_subtitle.rb"
   ]
 
   if s.respond_to? :specification_version then
@@ -42,11 +50,11 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
-      s.add_development_dependency(%q<thoughtbot-shoulda>, [">= 0"])
+      s.add_development_dependency(%q<thoughtbot-shoulda>, ["= 2.10.2"])
     else
-      s.add_dependency(%q<thoughtbot-shoulda>, [">= 0"])
+      s.add_dependency(%q<thoughtbot-shoulda>, ["= 2.10.2"])
     end
   else
-    s.add_dependency(%q<thoughtbot-shoulda>, [">= 0"])
+    s.add_dependency(%q<thoughtbot-shoulda>, ["= 2.10.2"])
   end
 end
