@@ -1,6 +1,6 @@
 = shift_subtitle
 
-This gem is for the 1st Ruby Programming Challenge For Newbies, of Ruby Learning Blog: http://rubylearning.com/blog/2009/09/24/rpcfn-shift-subtitle-1/
+This gem is for the 1st Ruby Programming Challenge For Newbies, of {Ruby Learning Blog}[ http://rubylearning.com/blog/2009/09/24/rpcfn-shift-subtitle-1]
 
 == Usage
 
@@ -10,7 +10,7 @@ On the command line:
 
 This command shifts everything 2 seconds ahead.
 
-You can use 'sub' for shift everything X seconds back
+You can use 'sub' for shift everything X seconds back.
 
 == Copyright
 
